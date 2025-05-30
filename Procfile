@@ -1,1 +1,1 @@
-web: gunicorn contactform.wsgi
+web: gunicorn novaai.wsgi
