@@ -117,9 +117,3 @@
       faqItem.parentNode.classList.toggle('faq-active');
     });
   });
-
-<<<<<<< HEAD
-})();
-=======
-})();
->>>>>>> 9cff74f0138bb9531d19d4a08ef029940b1fca38
