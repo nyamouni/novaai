@@ -1,0 +1,1 @@
+web: gunicorn novaai.wsgi
