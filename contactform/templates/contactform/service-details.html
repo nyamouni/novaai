@@ -1,0 +1,131 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>En savoir plus - Nova AI</title>
+  <meta name="description" content="Découvrez Nova AI, ses objectifs, sa mission et ses formations.">
+  <meta name="keywords" content="Nova AI, Data Science, Cours Python, IA Algérie, Formation Mathématiques">
+
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+</head>
+
+<body class="index-page">
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl d-flex justify-content-between align-items-center">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h1 class="sitename"><span>Nova</span>AI<small style="font-size: 0.6em; font-weight: normal; margin-left: 2px;">études</small></h1>
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="{% url 'index' %}">Accueil</a></li>
+          <li><a href="#about" class="active">En savoir plus</a></li>
+          <li><a href="{% url 'etre_contacter' %}">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header><!-- End Header -->
+
+  <main class="main">
+    <section class="about section pt-5">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>En savoir plus sur Nova AI</h2>
+        </div>
+  
+        <div class="row">
+          <div class="col-lg-12 content">
+            <p><strong>Nova AI</strong> est une startup éducative née d'une expertise de terrain, fondée par <strong>Noureddine Yamouni</strong>, Data Scientist et Ingénieur IA diplômé, avec une expérience en France dans l'industrie, l'éducation et les applications avancées de l'intelligence artificielle.</p>
+  
+            <h4>🚀 Notre Vision</h4>
+            <p>Nova AI vise à combler le fossé entre les connaissances académiques en mathématiques et les compétences techniques concrètes en Data Science et Intelligence Artificielle. Nous croyons que <strong>l'enseignement des bases mathématiques (Analyse, Algèbre, Statistiques)</strong> est un pilier fondamental pour former de futurs ingénieurs en IA et experts en données.</p>
+  
+            <h4>🎓 Nos domaines d’enseignement</h4>
+            <ul>
+              <li>✔️ <strong>Python</strong> – des bases jusqu’au développement d’algorithmes d’IA, orienté projets réels</li>
+              <li>✔️ <strong>Data Science</strong> – analyse de données, visualisation, machine learning</li>
+              <li>✔️ <strong>Mathématiques</strong> – pour lycéens (BAC, toutes filières), étudiants en licence/Master</li>
+              <li>✔️ <strong>IA appliquée</strong> – modèles supervisés, deep learning, projets NLP, computer vision</li>
+            </ul>
+  
+            <h4>🧠 Méthodologie pédagogique</h4>
+            <ul>
+              <li>📘 Enseignement <strong>structuré autour de projets</strong> (classification, prévision, clustering...)</li>
+              <li>🎥 Formations en <strong>présentiel ou distanciel</strong> (via Zoom, Google Meet, plateformes dédiées)</li>
+              <li>🎯 Un <strong>suivi individuel</strong> de chaque apprenant + feedback sur les projets réalisés</li>
+              <li>📜 <strong>Certificat de réussite</strong> délivré après évaluation</li>
+            </ul>
+  
+            <h4>👨‍💻 À propos du fondateur</h4>
+            <p>Noureddine Yamouni est diplômé Bac +5 en Data Science (OpenClassrooms) et diplômé de plusieurs établissements français (AI School, Lyon 2, Clermont Auvergne). Il a :</p>
+            <ul>
+              <li>💼 Mis en œuvre des modèles de scoring, segmentation, NLP et prévision dans des entreprises comme <strong>Necforme</strong></li>
+              <li>🤖 Développé des plateformes IA comme <strong>AIClipMaker</strong> (génération automatique de vidéos TikTok avec voix-off)</li>
+              <li>📊 Construit des dashboards (Streamlit, Power BI), mis en œuvre des modèles avec <strong>TensorFlow, PyTorch, Scikit-learn</strong></li>
+              <li>📚 Dispensé des <strong>cours de maths et d’IA en France et en Algérie</strong>, pour étudiants, entreprises, et lycéens</li>
+            </ul>
+  
+            <h4>🧩 Projets pédagogiques proposés</h4>
+            <p>Chaque apprenant travaille sur un ou plusieurs projets comme :</p>
+            <ul>
+              <li>🔍 Prévoir la consommation énergétique avec des modèles LSTM</li>
+              <li>🛍️ Segmenter des clients d’e-commerce (K-Means, DBSCAN, RFM)</li>
+              <li>💳 Créer un système de scoring de crédit (régression logistique, arbres)</li>
+              <li>🗣️ Générer des assistants vocaux en Python (gTTS, NLP, APIs)</li>
+            </ul>
+  
+            <h4>📌 Pourquoi choisir Nova AI ?</h4>
+            <ul>
+              <li>🇩🇿 Une startup algérienne <strong>100% adaptée au contexte local</strong>, mais avec des standards internationaux</li>
+              <li>💡 L’un des rares programmes à enseigner l’IA <strong>en dialecte algérien</strong>, avec accompagnement en français/anglais</li>
+              <li>🎓 Une passerelle vers les métiers du futur (Data Scientist, Analyste, Développeur IA)</li>
+            </ul>
+  
+            <div class="mt-4">
+              <a href="{% url 'etre_contacter' %}" class="btn btn-primary">Je veux m'inscrire ou être contacté</a>
+            </div>
+  
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer light-background">
+
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">NovaAi</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://www.tiktok.com/@novaai_etudes?lang=fr" target="_blank"><i class="bi bi-tiktok"></i></a>
+        <a href="https://www.instagram.com/novaai_etudes/" target="_blank"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/nour-eddine-yamouni-0163a5256/" target="_blank"><i class="bi bi-linkedin"></i></a>
+      </div>
+      <div class="credits">
+        Designed by <a href="https://nyamouni.github.io/portfolio/">YAMOUNI Noureddine</a>
+      </div>
+    </div>
+
+  </footer>
+
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+
+  <!-- JS Files -->
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/js/main.js' %}"></script>
+</body>
+
+</html>

@@ -1,0 +1,513 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>eStartup Nova AI</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+
+  <style>
+    .enlarged-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Masquer certaines images sur les petits écrans */
+  @media (max-width: 768px) {
+    .hide-on-mobile {
+      display: none !important;
+    }
+  }
+  .full-width-img {
+    width: 100%;
+    height: 180px; /* plus petit que before */
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  </style>
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h1 class="sitename"><span>Nova</span>AI<small style="font-size: 0.6em; font-weight: normal; margin-left: 2px;">études</small></h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section light-background">
+
+      <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-5">
+          <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
+            <h2>NovaAI</h2>
+            <p>Des cours interactifs et accessibles en Data Science, Python, Analyse, Algèbre et Mathématiques.
+              Que vous soyez lycéen, étudiant ou passionné de tech, progressez avec des contenus clairs, pratiques et pensés pour vous.
+              <br>
+              Data Science & Python – Apprenez à coder, analyser et visualiser des données.<br>
+              Cours Universitaires – Analyse, Algèbre, Statistiques : les bases solides pour réussir.<br>
+              Maths pour Lycéens – Des explications simples pour des résultats concrets.
+            </p>
+            <br>
+            <div class="d-flex">
+              <a href="{% url 'etre_contacter' %}" class="btn-get-started">Je veux être accompagné</a>
+            </div>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2">
+            <img src="{% static 'assets/img/hero-img.png' %}" class="img-fluid" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="icon-boxes position-relative" data-aos="fade-up" data-aos-delay="200">
+        <div class="container position-relative">
+          <div class="row gy-4 mt-5">
+
+            <div class="col-xl-3 col-md-6">
+              <div class="icon-box">
+                <div class="icon"><i class="bi bi-easel"></i></div>
+                <h4 class="title"><a href="#" class="stretched-link">Selon votre disponibilité</a></h4>
+              </div>
+            </div><!--End Icon Box -->
+
+            <div class="col-xl-3 col-md-6">
+              <div class="icon-box">
+                <div class="icon"><i class="bi bi-gem"></i></div>
+                <h4 class="title"><a href="#" class="stretched-link">Possibilité de progression rapide</a></h4>
+              </div>
+            </div><!--End Icon Box -->
+
+            <div class="col-xl-3 col-md-6">
+              <div class="icon-box">
+                <div class="icon"><i class="bi bi-geo-alt"></i></div>
+                <h4 class="title"><a href="#" class="stretched-link">Formation certifié</a></h4>
+              </div>
+            </div><!--End Icon Box -->
+
+            <div class="col-xl-3 col-md-6">
+              <div class="icon-box">
+                <div class="icon"><i class="bi bi-command"></i></div>
+                <h4 class="title"><a href="#" class="stretched-link">Ne subissez plus les maths : dominez-les</a></h4>
+              </div>
+            </div><!--End Icon Box -->
+
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
+            <p class="who-we-are">Qui sommes-nous</p>
+            <h3>Nova AI, première startup éducative algérienne en IA et mathématiques</h3>
+            <p class="fst-italic">
+              Nova AI est la première startup éducative algérienne spécialisée dans l’enseignement de la Data Science, 
+              de l’Intelligence Artificielle et des Mathématiques, en présentiel comme en ligne.
+            </p>
+            <p>
+              Fondée par <strong>Yamouni Noureddine</strong>, expert en Data Science diplômé et actif en France, 
+              Nova AI s’engage à rendre les compétences numériques les plus demandées <strong>accessibles à tous</strong> — 
+              du lycée jusqu’à l’enseignement supérieur.
+            </p>
+            <br>
+            <h4><b>Notre mission</b></h4>
+            <p>
+              Former la prochaine génération de <strong>data scientists, analystes et ingénieurs IA</strong> grâce à une solide 
+              base en mathématiques (analyse, algèbre) et en programmation (Python, Data Science, IA). Nova AI, c’est 
+              l’excellence pédagogique alliée à l’innovation locale et à un accompagnement humain.
+            </p>
+            <br>
+            <h4><b>À qui s’adresse Nova AI ?</b></h4>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> <span>Aux <strong>lycéens</strong> (toutes filières) qui veulent renforcer leur niveau en maths</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Aux <strong>étudiants universitaires</strong> (maths, informatique, écoles supérieures)</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>À tous ceux visant une carrière de <strong>Data Analyst ou Data Scientist</strong></span></li>
+            </ul>
+            <br>
+            <h4><b>Notre différence</b></h4>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> <span><strong>Cours en langue algérienne</strong> : accessibles et contextualisés</span></li>
+              <li><i class="bi bi-check-circle"></i> <span><strong>Présentiel ou distanciel</strong>, selon vos disponibilités</span></li>
+              <li><i class="bi bi-check-circle"></i> <span><strong>Projets professionnalisants</strong> tout au long de l'apprentissage</span></li>
+              <li><i class="bi bi-check-circle"></i> <span><strong>Certificat de réussite</strong> à la fin de chaque formation</span></li>
+              <li><i class="bi bi-check-circle"></i> <span><strong>Accompagnement personnalisé</strong> pour chaque apprenant</span></li>
+            </ul>
+
+            <h4>Pourquoi "Nova AI" ?</h4>
+            <p>
+              <strong>Nova</strong> évoque l'explosion d'une étoile : comme une lumière dans votre parcours, 
+              notre objectif est de faire briller vos compétences. 
+              Le <strong>AI</strong> incarne notre passion pour l’intelligence artificielle, un domaine en pleine expansion, 
+              solidement ancré dans les mathématiques que nous vous aidons à maîtriser.
+            </p>
+
+            <a href="{% url 'details' %}"  class="read-more"><span>En savoir plus</span><i class="bi bi-arrow-right"></i></a>
+          </div>
+
+
+          <div class="col-lg-6 about-images" data-aos="fade-up" data-aos-delay="200">
+            <div class="row gy-4">
+              <div class="col-lg-6">
+                <img src="{% static 'assets/img/about-company-1.jpg' %}" class="img-fluid enlarged-img" alt="">
+                <img src="{% static 'assets/img/im4.jpg' %}" class="img-fluid enlarged-img mt-4 hide-on-mobile" alt="">
+              </div>
+              <div class="col-lg-6">
+                <div class="row gy-4">
+                  <div class="col-lg-12">
+                    <img src="{% static 'assets/img/im.jpg' %}" class="img-fluid enlarged-img" alt="">
+                    <img src="{% static 'assets/img/1325192.jpg' %}" class="img-fluid enlarged-img mt-4 hide-on-mobile" alt="">
+                  </div>
+                  <div class="col-lg-12">
+                    <img src="{% static 'assets/img/im1.jpg' %}" class="img-fluid enlarged-img" alt="">
+                    <img src="{% static 'assets/img/im2.jpg' %}" class="img-fluid enlarged-img mt-4 hide-on-mobile" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <!-- Image qui prend toute la largeur des deux colonnes -->
+            <div class="row mt-4">
+              <div class="col-12">
+                <img src="{% static 'assets/img/im3.jpg' %}" class="img-fluid full-width-img" alt="">
+              </div>
+            </div>
+          </div>
+          
+          
+          
+        </div>
+        
+      </div>
+    </section><!-- /About Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Services</h2>
+        <div><span>Consultez nos </span> <span class="description-title">Services</span></div>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item  position-relative">
+              <div class="icon">
+                <i class="bi bi-activity"></i>
+              </div>
+              <a href="{% url 'etre_contacter' %}" class="stretched-link">
+                <h3>Data Scientist / Analyst</h3>
+              </a>
+              <p>Maîtrisez la collecte, l’analyse et la visualisation de données. Apprenez les techniques de machine learning et les outils comme Python, Pandas, Scikit-learn.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-broadcast"></i>
+              </div>
+              <a href="{% url 'etre_contacter' %}" class="stretched-link">
+                <h3>Analyse, Algèbre pour Universitaires & Prépas</h3>
+              </a>
+              <p>Intégrez les fondamentaux de l’analyse mathématique : suites, limites, dérivées, intégrales… avec des exercices adaptés au niveau licence et classes préparatoires.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-easel"></i>
+              </div>
+              <a href="{% url 'etre_contacter' %}" class="stretched-link">
+                <h3> Formation en IA pour les entreprises</h3>
+              </a>
+              <p>Initiez vos équipes à l’intelligence artificielle appliquée : machine learning, automatisation, data visualisation et IA générative. Formations pratiques + cas réels adaptés à votre secteur.              </p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-bounding-box-circles"></i>
+              </div>
+              <a href="{% url 'etre_contacter' %}" class="stretched-link">
+                <h3>Projets AI en mémoire de L3 et M2</h3>
+              </a>
+              <p>Accompagner les étudiant dans leurs projets de mémoire (Pour les Licences 3 et Masters 2 ).</p>
+              <a href="{% url 'etre_contacter' %}" class="stretched-link"></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-calendar4-week"></i>
+              </div>
+              <a href="{% url 'etre_contacter' %}" class="stretched-link">
+                <h3>Python - Tous Niveaux</h3>
+              </a>
+              <p>Apprenez à programmer en Python de A à Z, même sans aucune base. De la logique de programmation aux scripts utiles, en passant par les projets pratiques.</p>
+              <a href="{% url 'etre_contacter' %}" class="stretched-link"></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-chat-square-text"></i>
+              </div>
+              <a href="{% url 'etre_contacter' %}" class="stretched-link">
+                <h3>Maths pour Lycéens</h3>
+              </a>
+              <p>Des cours adaptés aux élèves scientifiques, math-techniques et math-littéraires. Sujets BAC, méthodes visuelles et coaching pour réussir l'examen.</p>
+              <a href="{% url 'etre_contacter' %}" class="stretched-link"></a>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
+
+    <!-- Features Section -->
+    <section id="features" class="features section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Fonctionnalités</h2>
+        <div><span>Découvrez nos </span> <span class="description-title">Fonctionnalités</span></div>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-5 justify-content-between">
+
+          <div class="col-xl-5" data-aos="zoom-out" data-aos-delay="100">
+            <img src="{% static 'assets/assets/img//template/eStartup/features.svg' %}" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-xl-6 d-flex">
+            <div class="row align-self-center gy-4">
+
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="feature-box d-flex align-items-center">
+                  <i class="bi bi-check"></i>
+                  <h3>Apprentissage basé sur des projets réels</h3>
+                </div>
+              </div><!-- End Feature Item -->
+
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="feature-box d-flex align-items-center">
+                  <i class="bi bi-check"></i>
+                  <h3>Certificats de réussite officiels</h3>
+                </div>
+              </div><!-- End Feature Item -->
+
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+                <div class="feature-box d-flex align-items-center">
+                  <i class="bi bi-check"></i>
+                  <h3>Suivi personnalisé avec un expert</h3>
+                </div>
+              </div><!-- End Feature Item -->
+
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
+                <div class="feature-box d-flex align-items-center">
+                  <i class="bi bi-check"></i>
+                  <h3>Présentiel ou distanciel, selon votre rythme</h3>
+                </div>
+              </div><!-- End Feature Item -->
+
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="600">
+                <div class="feature-box d-flex align-items-center">
+                  <i class="bi bi-check"></i>
+                  <h3>Contenu technique et pratique (Python, IA, Stats...)</h3>
+                </div>
+              </div><!-- End Feature Item -->
+
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="700">
+                <div class="feature-box d-flex align-items-center">
+                  <i class="bi bi-check"></i>
+                  <h3>Cours en arabe algérien, français ou anglais</h3>
+                </div>
+              </div><!-- End Feature Item -->
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Features Section -->
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <div><span>Besoin d'aide ?</span> <span class="description-title">Contactez-nous</span></div>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4">
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+              <i class="bi bi-geo-alt flex-shrink-0"></i>
+              <div>
+                <h3>Addresse</h3>
+                <p>Oran 31000</p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+              <i class="bi bi-telephone flex-shrink-0"></i>
+              <div>
+                <h3>Appelez-nous</h3>
+                <p>+213 549 19 22 46</p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-envelope flex-shrink-0"></i>
+              <div>
+                <h3>Email Us</h3>
+                <p>devaiwebcontact@gmail.com</p>
+              </div>
+            </div><!-- End Info Item -->
+
+          </div>
+
+          <div class="col-lg-8">
+            {% if messages %}
+              {% for message in messages %}
+                <div class="alert alert-success">{{ message }}</div>
+              {% endfor %}
+            {% endif %}
+            <form class="email-form" action="{% url 'envoyer_message' %}" method="post" data-aos="fade-up" data-aos-delay="200">
+              {% csrf_token %}
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Votre Nom" required="">
+                </div>
+
+                <div class="col-md-6 ">
+                  <input type="email" class="form-control" name="email" placeholder="Votre Email" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Votre numéro" required="">
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <button type="submit">Envoyer Le Message</button>
+                </div>
+                
+
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer light-background">
+
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">NovaAi</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://www.tiktok.com/@novaai_etudes?lang=fr" target="_blank"><i class="bi bi-tiktok"></i></a>
+        <a href="https://www.instagram.com/novaai_etudes/" target="_blank"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/nour-eddine-yamouni-0163a5256/" target="_blank"><i class="bi bi-linkedin"></i></a>
+      </div>
+      <div class="credits">
+        Designed by <a href="https://nyamouni.github.io/portfolio/">YAMOUNI Noureddine</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+
+  <!-- Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>
